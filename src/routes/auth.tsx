@@ -1,10 +1,21 @@
 import { RouteObject } from "react-router-dom";
-import Login from "../pages/login";
 
-const signRoute: RouteObject = {
-  path: '/login',
+import Login from "../pages/login";
+import SignUp from "../pages/signup";
+
+const loginRoute: RouteObject = {
+  path: 'login',
   // loader: alredyLogged,
-  element: <Login />
+  element: <Login />,
 };
 
-export default signRoute;
+const signUpRoute: RouteObject = {
+  path: 'signup',
+  // loader: alredyLogged,
+  element: <SignUp />,
+};
+
+export default [
+  loginRoute,
+  signUpRoute
+];

@@ -1,14 +1,17 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import signRoute from "./auth";
+
+import authRoutes from "./auth";
+import Home from "../pages/home";
 
 const AppRoutes = () => {
 
   const router = createBrowserRouter([{
     path: '/',
     children: [
-      signRoute,
+      ...authRoutes,
       {
-        // element: <Layout />,
+        path: '',
+        element: <Home />,
         // loader: tokenIsValid,
         children: [
           // ...allowedRoutes,
